@@ -3,9 +3,9 @@ Template of analysis made with AnalysisTree package.
 
 # Requirement
 
-* CMake 3.15
-* ROOT v6-20-04 built with C++17
-* AnalysisTree built with C++17 (see https://docs.google.com/document/d/1ztejoeJ45Aqdgq3a4m1DXTg4A1hUR3SDqk4ybYkboLA/edit for instructions)
+* CMake 3.0
+* ROOT v6-18-04
+* AnalysisTree (see https://docs.google.com/document/d/1ztejoeJ45Aqdgq3a4m1DXTg4A1hUR3SDqk4ybYkboLA/edit for instructions)
 
 # Building
 
