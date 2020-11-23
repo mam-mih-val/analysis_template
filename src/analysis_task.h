@@ -25,18 +25,23 @@ public:
   void Finish() override;
 private:
  enum class FIELDS{ // enumerator to fast access to detectors' fields
-   HITS_TOF, 	// Hits in TOF-system
+   MULT, 	// Hits in TOF
+   HITS_PSD, 	// Hits in PSD 
   };
   std::map<FIELDS, int> fields_id_; // map to match detectors' fields with enumerator
 
   /* pointers to link tree's branches with */
-  EventHeader* event_header_{nullptr}; 		// event info
-  Particles* mdc_vtx_tracks_{nullptr}; 		// tracks
-  HitDetector* meta_hits_{nullptr}; 		// TOF-system
-  Matching* mdc_meta_matching_{nullptr}; 	// matching between tracking system and TOF-system
+  EventHeader* SimEventHeader_{nullptr}; 		// MC event info
+  EventHeader* RecEventHeader_{nullptr}; 		// reconstructed event info
+  Particles* SimParticles_{nullptr}; 		// MC tracks
+  TrackDetector* VtxTracks_{nullptr}; 		// reconstructed tracks
+  HitDetector* TofHits_{nullptr}; 		// TOF
+  HitDetector* PsdModules_{nullptr}; 		// PSD 
+  Matching* VtxTracks2SimParticles_{nullptr}; 	// matching between MC and reconstructed tracks
+  Matching* VtxTracks2TofHits_{nullptr}; 	// matching between reconstructed tracks and TOF hits
 
-  TH1F* tof_multiplicity_distribution_; 	// 1D histogram of sum multiplicity in TOF system
-  TH1F* pT_distribution_; 					// 1D histogram of track transverse momentum distribution
+  TH1F* hMultiplicity_; 	// 1D distribution of event variable 
+  TH2F* h2pTyProton_; 		// 2D distribution of track variables
 };
 } // namespace AnalysisTree
 #endif // QUALITY_ASSURANCE_SRC_TREE_READER_H_

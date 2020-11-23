@@ -10,7 +10,7 @@ int main(int n_args, char** args){
     throw std::runtime_error( "Please use: ./acceptance file.list" );
   }
   std::string list{args[1]};
-  AnalysisTree::TaskManager manager({list}, {"hades_analysis_tree"});
+  AnalysisTree::TaskManager manager({list}, {"aTree"});
 
   auto *analysis_task = new AnalysisTree::AnalysisTask;
 
