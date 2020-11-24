@@ -11,7 +11,7 @@ Template of analysis made with AnalysisTree package.
 
 Clone this repository with
 ```
-  git clone https://github.com/mam-mih-val/analysis_template
+  git clone -b cbm https://github.com/mam-mih-val/analysis_template
 ```
 Create build directory
 ```
