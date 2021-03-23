@@ -3,41 +3,58 @@ Template of analysis made with AnalysisTree package.
 
 # Requirement
 
-* CMake 3.15
-* ROOT v6-20-04 built with C++17
-* AnalysisTree built with C++17 (see https://docs.google.com/document/d/1ztejoeJ45Aqdgq3a4m1DXTg4A1hUR3SDqk4ybYkboLA/edit for instructions)
+* CMake 3.11
+* ROOT v6-20-04 or v6-18-04 built with C++17
+* Boost
 
 # Building
 
 Clone this repository with
 ```
-  git clone https://github.com/mam-mih-val/analysis_template
+  $ git clone https://github.com/mam-mih-val/analysis_template
 ```
-Create build directory
+Checkout to the mpd branch
 ```
-  cd analysis_template
-  mkdir build
-  cd build
+  $ git checkout mpd
+```
+Create the build directory
+```
+  $ cd analysis_template
+  $ mkdir build
+  $ cd build
 ```
 Source root environment
 ```
-  source /path/to/root/install/bin/thisroot.sh
+  $ source /path/to/root/install/bin/thisroot.sh
 ``` 
-Export AnalysisTree library
-```
-  export AnalysisTree_DIR=/path/to/AnalysisTree/install/lib/cmake/AnalysisTree/
-```
 Build the project
 ```
-  cmake ..
-  make -j
+  $ cmake ..
+  $ make -j
 ```
 
 # Usage
-To use the program run
+To list all the options run
 ```
-  ./analyse path/to/file.list
+  ./analyse -h
 ```
-Example of file list you can find in "lists" directory.
+Available options are bellow
+```asm
+   -h [ --help ]                   print usage message
+   --tasks                         print registered tasks
+  -i [ --input-filelists ] arg    lists of AT ROOT Files
+  -t [ --tree-names ] arg         Tree names
+  -o [ --output-file-name ] arg   Output ROOT filename
+  --output-tree-name arg (=aTree) Output tree name
+  -n [ --n-events ] arg (=-1)     Number of events to process (-1 = until the 
+                                  end)
+  --enable-tasks arg              Enable specific tasks
+                                  Tasks: AnalysisTask 
+  --disable-tasks arg             Disable specific tasks
+                                  Tasks: AnalysisTask 
+  --cuts-macro arg                Macro with cuts definitions
+  --event-cuts arg                Name of event cuts
+  --branch-cuts arg               Name(s) of branch cuts
+```
 
 Detailed description of how to work with AnalysisTree is stored in https://docs.google.com/document/d/1pWh8T4xAjVvJJyB1OQYLRzVW_HHinZ_uxHHPz_1rfQs/edit.
