@@ -13,13 +13,13 @@ Clone this repository with
 ```
   $ git clone https://github.com/mam-mih-val/analysis_template
 ```
-Checkout to the mpd branch
+Change directory and checkout to the mpd branch
 ```
+  $ cd analysis_template
   $ git checkout mpd
 ```
 Create the build directory
 ```
-  $ cd analysis_template
   $ mkdir build
   $ cd build
 ```
