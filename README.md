@@ -3,7 +3,7 @@ Template of analysis made with AnalysisTree package.
 
 # Requirement
 
-* CMake 3.11
+* CMake 3.11 or newer
 * ROOT v6-20-04 or v6-18-04 built with C++17
 * Boost
 
