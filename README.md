@@ -19,6 +19,10 @@ Create build directory
   mkdir build
   cd build
 ```
+Checkout to the current git-branch
+```
+  git checkout mpd_plain_at
+```
 Source root environment
 ```
   source /path/to/root/install/bin/thisroot.sh
