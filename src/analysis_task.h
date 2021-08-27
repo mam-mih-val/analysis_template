@@ -36,6 +36,7 @@ private:
   AnalysisTree::ModulePositions fhcal_modules_positions_;
   TH1F* pT_distribution_;
   TH1F* fhcal_energy_distribution_;
+  TH1F* fhcal_phi_distribution_;
   TH2F*fhcal_modules_xy_;
 };
 #endif // QUALITY_ASSURANCE_SRC_TREE_READER_H_
