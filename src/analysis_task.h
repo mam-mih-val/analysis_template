@@ -37,10 +37,10 @@ private:
   /* pointers to link tree's branches with */
   ATI2::Branch* event_header_{nullptr}; 		// event info
   ATI2::Branch* vtx_tracks_{nullptr}; 		        // reconstructed tracks
-  ATI2::Branch*fhcal_modules_{nullptr}; 		// modules of FhCal branch
+  ATI2::Branch* psd_modules_{nullptr}; 		// modules of FhCal branch
   TH1F* pT_distribution_;
-  TH1F* fhcal_energy_distribution_;
-  TH2F*fhcal_modules_xy_;
+  TH1F* psd_energy_distribution_;
+  TH2F* psd_modules_xy_;
 TASK_DEF(AnalysisTask, 0)
 };
 #endif // QUALITY_ASSURANCE_SRC_TREE_READER_H_
