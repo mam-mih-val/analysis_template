@@ -16,7 +16,7 @@ Clone this repository with
 Change directory and checkout to the mpd branch
 ```
   $ cd analysis_template
-  $ git checkout mpd
+  $ git checkout na61
 ```
 Create the build directory
 ```
@@ -55,6 +55,10 @@ Available options are bellow
   --cuts-macro arg                Macro with cuts definitions
   --event-cuts arg                Name of event cuts
   --branch-cuts arg               Name(s) of branch cuts
+```
+Example of command which executes with file list "/path/to/file/list/na61.list" containing root files with tree "aTree" and writes the output to file "/path/to/file/out/out.root" and 10K events to be processed.
+```
+  $ analyse /path/to/file/list/na61.list -t aTree -o /path/to/file/out/out.root -n 10000
 ```
 
 Detailed description of how to work with AnalysisTree is stored in https://docs.google.com/document/d/1pWh8T4xAjVvJJyB1OQYLRzVW_HHinZ_uxHHPz_1rfQs/edit.
