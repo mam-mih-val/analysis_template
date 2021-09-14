@@ -26,7 +26,7 @@ void AnalysisTask::UserExec() {
     pT_distribution_->Fill(pT);
   }
   auto psd_modules_posotions = data_header_->GetModulePositions(0);
-  for( auto& module : psd_modules_->Loop()){
+  for( auto& module : psd_modules_->Loop() ){
     auto id = module.DataT<Module>()->GetId();
     auto module_pos = psd_modules_posotions.GetChannel(id);
     auto signal = module.DataT<Module>()->GetSignal();
